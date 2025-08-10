@@ -1,120 +1,283 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Shanshan Luo — Homepage (Template Clone)</title>
-  <meta name="description" content="Personal academic homepage template (clone of shanshanluo.cn).">
-  <style>
-    :root{--bg:#ffffff;--muted:#666;--accent:#0b72b9;--card:#f8f9fb;--maxw:980px}
-    *{box-sizing:border-box}
-    body{font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; color:#111; background:var(--bg); line-height:1.55}
-    .container{max-width:var(--maxw); margin:28px auto; padding:20px}
-    header{display:flex; gap:18px; align-items:center}
-    .avatar{width:110px;height:110px;border-radius:8px;background:#ddd;flex:0 0 110px;display:flex;align-items:center;justify-content:center;font-weight:700;color:#888}
-    h1{margin:0;font-size:1.6rem}
-    .sub{color:var(--muted); margin-top:6px}
-    nav{margin-top:18px;border-top:1px solid #eee;padding-top:14px;display:flex;gap:12px;flex-wrap:wrap}
-    nav a{color:var(--accent); text-decoration:none;font-weight:600}
-    .grid{display:grid;grid-template-columns:1fr 320px;gap:26px;margin-top:22px}
-    .card{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 1px 0 rgba(0,0,0,0.03)}
-    section h2{margin-top:0;font-size:1.15rem}
-    ul.pub{padding-left:1rem;margin:8px 0}
-    ul.pub li{margin-bottom:8px}
-    .sidebar .info{font-size:0.95rem;color:var(--muted)}
-    .contact{margin-top:12px}
-    .contact a{display:inline-block;margin-right:10px;color:var(--accent);text-decoration:none}
-    footer{margin-top:28px;padding-top:12px;border-top:1px solid #eee;color:var(--muted);font-size:0.9rem}
-    @media(max-width:880px){.grid{grid-template-columns:1fr;}.sidebar{order:2}}
-  </style>
-</head>
-<body>
-  <div class="container">
-    <header>
-      <div class="avatar">IMG</div>
-      <div>
-        <h1>Shanshan Luo</h1>
-        <div class="sub">Department of Applied Statistics — School of Mathematics and Statistics<br>Beijing Technology and Business University</div>
-        <div class="sub" style="margin-top:6px">Office: Room 209, Shutong Building • Email: <a href="mailto:shanshanluo@btbu.edu.cn">shanshanluo@btbu.edu.cn</a></div>
-      </div>
-    </header>
+ <meta name="description" content="Shanshan Luo&#39;s home page">
+<link rel="stylesheet" href="jemdoc.css" type="text/css">
+<link rel="shortcut icon" href="BTBU_logo.png">
+<title>Shanshan Luo's Homepage</title>
 
-    <nav>
-      <a href="#bio">Biography</a>
-      <a href="#research">Research Interests</a>
-      <a href="#pubs">Publications</a>
-      <a href="#teaching">Teaching</a>
-      <a href="#cv">CV</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <head>
+    <title>My Webpage</title>
+    <style>
+      .pdf-container {
+        position: relative;
+        height: 0;https://github.com/shan3luo1995/shan3luo1995.github.io/blob/main/index.html
+        overflow: hidden;
+        padding-bottom: 56.25%; /* 比例为16:9的填充百分比 */
+      }
+      .pdf-container object {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+      }
+    </style>
+  </head>
 
-    <div class="grid">
-      <main>
-        <section id="bio" class="card">
-          <h2>Biography</h2>
-          <p>
-            I am a lecturer in the Department of Applied Statistics at the School of Mathematics and Statistics, Beijing Technology and Business University (September 2022 - present). Previously, I obtained my Ph.D. degree in the School of Mathematical Sciences at Peking University (September 2017 - July 2022), under the supervision of Prof. Yangbo He. I obtained my B.S. degree in the School of Mathematical Sciences at Capital Normal University (September 2013 - July 2017).
-            Here is my <a href="#cv">CV</a>.
-          </p>
-        </section>
+<body> 
+<div id="layout-content" style="margin-top:25px">
 
-        <section id="research" class="card" style="margin-top:18px">
-          <h2>Research Interests</h2>
-          <p>My primary research focuses on causal inference, particularly causal mechanisms and the interpretability of causal relationships. I am interested in exploring the assumptions necessary to establish the identifiability of key causal parameters, as well as methods for partial identification. Additionally, I am also interested in developing more flexible and robust estimation methods. Recently, my collaborators and I have focused on the following areas:</p>
-          <ul>
-            <li>Causal effect: covariate adjustment, data fusion, instrumental variables, measurement error, principal stratification, propensity score, spillover effect</li>
-            <li>Causal attribution: individual attribution analysis, continuous outcome attribution</li>
-            <li>Causal discovery: Bayesian networks, causal mechanism of latent confounders, proximal variable selection</li>
-            <li>Missing data: nonignorable missing data</li>
-            <li>Applications: environmental protection, oil price forecasting, and cancer causation</li>
-          </ul>
-        </section>
+	 <!-- <a href="/cn">中文版本</a>-->
+		
+<table>
+    <tbody>
+        <tr>
+            <td width="670">
+                <div id="toptitle">
+                    <h1>Shanshan Luo &nbsp; <img src="shanshanluo.png" height="38px" style="margin-bottom:-10px" alt=''></h1>
+                </div>
+                <p>
+                  <!--   <FONT size=5 face="Times New Roman">Associate Professor</FONT><br>-->
+               <br>
+                    <a href="https://stxy.btbu.edu.cn/szdw/yytjxsz/jsyytjxjs/9adc97e54a0a4e38a8bd1eb92f2fcd1b.htm" target="_blank">
+  Department of Applied Statistics
+</a> & 
+<a href="https://btbu-causality.group/" target="_blank">
+  Causal Inference Group
+</a><br>
 
-        <section id="pubs" class="card" style="margin-top:18px">
-          <h2>Selected Publications</h2>
-          <ol class="pub">
-            <li>Shanshan Luo, Mengchen Shi, Wei Li, Xueli Wang, and Zhi Geng. <em>Efficiency-improved doubly robust estimation with non-confounding predictive covariates</em>. To appear in Electronic Journal of Statistics, 2025.</li>
-            <li>Shanshan Luo and Zhi Geng. <em>Discussion on 'Causal and Counterfactual Views of Missing Data Models'</em>. To appear in Statistica Sinica, 2025.</li>
-            <li>Wei Li, Yuan Liu, Shanshan Luo, and Zhi Geng. <em>Causal inference with outcomes truncated by death and missing not at random</em>. To appear in Statistics in Medicine, 2025.</li>
-            <li>Shanshan Luo, Yixuan Yu, Chunchen Liu, Feng Xie, and Zhi Geng. <em>Causal attribution analysis for continuous outcomes</em>. ICML, Vancouver, Canada, 2025.</li>
-            <li>... (more publications) ...</li>
-          </ol>
-          <p style="margin-top:12px"><a href="#">Full publication list (placeholder)</a></p>
-        </section>
+                     School of Mathematics and Statistics <br>
+                    Beijing Technology and Business University <br>
+                    Beijing, China. 102488.<br>
+                    <br>
+                    Office: Room 209, Shutong Building, Higher Education Garden, Liangxiang,
+                    <br>
+                    Email: shanshanluo@btbu.edu.cn
+                </p>
+            </td>
+            <td>
+<!--            <img src="photos/shanshanluo3.jpeg" border="0" width="200">  -->
+                <img src="photos/shanshanluo_xinjiang.jpg" border="0" width="180"> 
+            </td>
+        </tr>
+    </tbody>
+</table>
 
-        <section id="teaching" class="card" style="margin-top:18px">
-          <h2>Teaching</h2>
-          <ul>
-            <li>Applied Stochastic Processes: Fall 2022</li>
-            <li>Multivariate Statistical Analysis: Spring 2023, Fall 2023, Spring 2024, Fall 2024, Spring 2025</li>
-            <li>Causal Inference: Spring 2023, Fall 2023, Fall 2024, Spring 2025</li>
-          </ul>
-        </section>
+<h2>Biography</h2>
+<p>
+I am a lecturer in the Department of Applied Statistics at the School of Mathematics and Statistics, Beijing Technology and Business University (September 2022 - present). Previously, I obtained my Ph.D. degree in the School of Mathematical Sciences at Peking University (September 2017 - July 2022), under the supervision of Prof. Yangbo He. I obtained my B.S. degree in the School of Mathematical Sciences at Capital Normal University (September 2013 - July 2017). 
+	  Here is my <a href="CausalFall/ShanshanCV.pdf" target="_blank">CV</a>.
 
-      </main>
+	 <!-- <a href="https://www.math.pku.edu.cn/teachers/heyb/" target="_blank">Yangbo He</a>.-->
+</p>
 
-      <aside class="sidebar">
-        <div class="card" style="margin-bottom:18px">
-          <h3 style="margin-top:0">Quick Info</h3>
-          <div class="info">
-            <div><strong>Affiliation:</strong> School of Mathematics and Statistics, BTBU</div>
-            <div><strong>Office:</strong> Room 209, Shutong Building</div>
-            <div><strong>Email:</strong> <a href="mailto:shanshanluo@btbu.edu.cn">shanshanluo@btbu.edu.cn</a></div>
-          </div>
-        </div>
+<!-- <h2>Research Interests</h2>
+<p>
+<ul>
+<li><p> Effect evaluation: covariate adjustment, data fusion, instrumental variable, principal stratification, propensity score, spillover effect </p>
+</li>
+ <li><p>  Causal discovery:  Bayesian network </p>
+</li>
+ <li><p>  Causal attribution: individual attribution analysis </p>
+</li>
+<li><p> Missing data: nonignorable missing data </p>
+</li>
+</ul>
+</p>
+ -->
+<h2>Research Interests</h2>
+<p>My primary research focuses on causal inference, particularly causal mechanisms and the interpretability of causal relationships. I am interested in exploring the assumptions necessary to establish the identifiability of key causal parameters, as well as methods for partial identification. Additionally, I am also interested in developing more flexible and robust estimation methods. Recently, my collaborators and I have focused on the following areas:</p>
+<ul>
+  <li>Causal effect: covariate adjustment, data fusion, instrumental variable, measurement error, principal stratification, propensity score, spillover effect</li>
+  <li>Causal attribution: individual attribution analysis, continuous outcome attribution </li> 
+  <li>Causal discovery: Bayesian network, causal mechanism of latent confounders, proximal variable selection
+  <li>Missing data: nonignorable missing data</li>
+<li>Applications: environmental protection, oil price forecasting, and cancer causation</li>
+<!-- 	  <p>(In fact, over the past year, I have been diligently learning this topic from Prof   <a href="https://fengxie.site/" target="_blank">Feng Xie</a>.)</li></p> -->
+</ul>
 
-        <div class="card">
-          <h3 style="margin-top:0">Links</h3>
-          <p style="margin:0.3rem 0"><a href="#cv">CV</a></p>
-          <p style="margin:0.3rem 0"><a href="#pubs">Publications</a></p>
-          <p style="margin:0.3rem 0"><a href="#contact">Contact</a></p>
-        </div>
-      </aside>
-    </div>
+	
+ <!--  <p align="justify"><span style="color:#ff0000"><b>I'm looking for students. Welcome to contact me if you are interested! </b></span></p> -->
 
-    <footer>
-      <div id="contact">© <strong>Shanshan Luo</strong>. This is a template clone for educational use. Replace placeholders and images with your own content.</div>
-    </footer>
+
+<h2>Publications <small></small></h2>
+
+<!-- <pre><font size="3"><b>* Corresponding author</b></font></pre>-->
+
+<!--<font size="3"><b>Working papers</b></font> 
+<ul>
+    <li>
+        dd
+    </li>
+</ul>-->
+
+
+
+<!-- <font size="3"><b>Accepted papers</b></font>  -->
+	<ol>
+		    <li><p>   <b> Shanshan Luo</b>, Mengchen Shi, Wei Li, Xueli Wang, and Zhi Geng.     <a href="CausalFall/obs_cov_adj_EJS.pdf" target="_blank">Efficiency-improved doubly robust estimation with non-confounding predictive covariates</a>. To appear in <i>Electronic Journal of Statistics</i>, 2025.</p>
+    </li>    
+		
+		    <li><p>  <b> Shanshan Luo</b>  and Zhi Geng.    <a href="https://www3.stat.sinica.edu.tw/ss_newpaper/SS-2025-0152_na.pdf" target="_blank">Discussion on ‘‘Causal and Counterfactual Views of Missing Data Models’’</a>. To appear in  <i>Statistica Sinica</i>, 2025.</p>
+    </li>   
+		  <li><p>  Wei Li, Yuan Liu,   <b> Shanshan Luo</b>, and Zhi Geng.    <a href="https://doi.org/10.1002/sim.70126" target="_blank">Causal inference with outcomes truncated by death and missing not at random</a>. To appear in <i>Statistics in Medicine</i>,  2025.</p>
+    </li>   
+		    <li><p>   <b> Shanshan Luo</b>, Yixuan Yu, Chunchen Liu, Feng Xie, and Zhi Geng.    <a href="https://openreview.net/forum?id=Lie2rOCgkh" target="_blank">Causal attribution analysis for continuous outcomes</a>.   <i>ICML</i>,  Vancouver,  Canada, 2025.  (spotlight, top 2.6%)</p>
+    </li>     
+ <li><p> <b> Shanshan Luo</b>, Yechi Zhang,   Wei Li, and Zhi Geng.    <a href="https://www.sciencedirect.com/science/article/abs/pii/S0167947325000519" target="_blank">Multiply robust estimation of causal effects using linked data</a>. To appear in <i>Computational Statistics & Data Analysis</i>, 2025.</p>
+    </li>
+		    <li><p> Peng Wu, <b> Shanshan Luo</b>, and Zhi Geng.    <a href="https://doi.org/10.1080/01621459.2024.2435656" target="_blank">On the comparative analysis of average treatment effects estimation via data combination</a>. To appear in <i>Journal of the American Statistical Association</i>, 2024.</p>
+    </li> 
+		
+		    <li><p><b> Shanshan Luo</b>, Jiaqi Min, Wei Li, Xueli Wang, and Zhi Geng.    <a href="https://www.sciencedirect.com/science/article/abs/pii/S0167947324001634" target="_blank">A comparative analysis of different adjustment sets using propensity score based estimators</a>.   <i>Computational Statistics & Data Analysis</i>,  2025; 203: 108079.</p>
+    </li>
+
+		
+
+
+    <li><p>Shaojie Wei, Chao Zhang, Zhi Geng, and <b>Shanshan Luo</b>.    <a href="https://doi.org/10.3390/math12182801" target="_blank">Identifiability and estimation for potential-outcome means with misclassified outcomes</a>.  <i>Mathematics</i>,  2024; 12(18):2801.</p>
+    </li>
+
+		    <li><p><b> Shanshan Luo</b>, Wei Li, Wang Miao, and Yangbo He.    <a href="http://doi.org/10.1002/sim.10175" target="_blank">Identification and estimation of causal effects in the presence of confounded principal strata</a>.    <i>Statistics in Medicine</i>,   2024; 43(22): 4372-4387.</p>
+    </li>
+     
+    <li><p>Kang Shuai, <b> Shanshan Luo</b>, Wei Li, and Yangbo He.    <a href="http://www3.stat.sinica.edu.tw/ss_newpaper/SS-2024-0006_na.pdf" target="_blank">Identifying causal effects using instrumental variables from the auxiliary population</a>. To appear in  <i>Statistica Sinica</i>, 2024.</p>
+    </li>
+     
+    <li><p>Kang Shuai, <b> Shanshan Luo</b>, Yue Zhang, Feng Xie, and Yangbo He.    <a href="http://www3.stat.sinica.edu.tw/ss_newpaper/SS-2023-0315_na.pdf" target="_blank">Identification and estimation of causal effects using non-Gaussianity and auxiliary covariates</a>. To appear in  <i>Statistica Sinica</i>, 2024.</p>
+    </li>
+     
+    <li><p>Feng Xie, Zhengming Chen, <b> Shanshan Luo</b>, Wang Miao, Ruichu Cai, and Zhi Geng.    <a href="https://dl.acm.org/doi/10.5555/3692070.3694308" target="_blank">Automating the selection of proxy variables of unmeasured confounders</a>.   <i>ICML</i>,  Vienna, Austria, 2024.  (spotlight, top 3.5%)</p>
+    </li>
+     
+    <li><p> Honglei Zhang,  Shuyi Wang,  Haoxuan Li,   Chunyuan Zheng,  Xu Chen,  Li Liu, <b> Shanshan Luo</b>, and  Peng Wu.  <a href="https://ieeexplore.ieee.org/abstract/document/10597923/authors#authors" target="_blank">  Uncovering the limitations of eliminating selection bias for recommendation: missing mechanisms, disentanglement, and identifiability</a>.  <i>ICDE</i>, Utrecht, Netherlands, 2024.</p>
+    </li>
+     
+    <li><p>Wei Li, <b> Shanshan Luo</b>, and Wangli Xu.    <a href="https://www.sciencedirect.com/science/article/abs/pii/S0167947323001822" target="_blank">Calibrated regression estimation using empirical likelihood under data fusion</a>.   <i>Computational Statistics & Data Analysis</i>, 2024; 190: 107871.</p>
+    </li>
+     
+   	<li><p>  Wei Li, <b>Shanshan Luo</b>, Yangbo He, and Zhi Geng. <a href="https://doi.org/10.1002/sim.9883" target="_blank">Subgroup analysis using Bernoulli-gated hierarchical mixtures of experts models</a>.  <i>Statistics in Medicine</i>, 2023; 42(26): 4681–4695.</p>
+   	</li> 
+ 
+   	<li><p><b> Shanshan Luo</b>, Wei Li, and Yangbo He. <a href="https://doi.org/10.1111/biom.13554" target="_blank">Causal inference with outcomes truncated by death in multiarm studies</a>. <i>Biometrics</i>, 2023; 79(1): 502-513.</p>
+   	</li> 
+</ol>
+<!-- <font size="3"><b>Working papers</b></font> 
+	<ol>
+    <li><p>  Wei Li, Yuan Liu,   <b> Shanshan Luo*</b>, and Zhi Geng.    <a href="https://arxiv.org/pdf/2406.10554v2" target="_blank">Causal inference with outcomes truncated by death and missing not at random</a>. <i>arXiv</i>, 2024.</p>
+    </li>    
+ 
+    <li><p>   <b> Shanshan Luo</b>, Yixuan Yu, Chunchen Liu, Feng Xie*, and Zhi Geng.    <a href="https://arxiv.org/pdf/2404.05246.pdf" target="_blank">Assessing the causes of continuous effects by posterior effects of causes</a>. <i>arXiv</i>, 2024.</p>
+    </li>     
+    <li><p>   <b> Shanshan Luo</b>, Mengchen Shi, Wei Li*, Xueli Wang, and Zhi Geng.    <a href="https://arxiv.org/pdf/2402.14438.pdf" target="_blank">Efficiency-improved doubly robust estimation with non-confounding predictive covariates</a>. <i>arXiv</i>, 2024.</p>
+    </li>    
+ 
+   
+ 
+    <li><p> <b> Shanshan Luo#</b>, Yechi Zhang#, and Wei Li*.    <a href="https://arxiv.org/pdf/2309.08199.pdf" target="_blank">Multiply robust estimation of causal effects using linked data</a>. <i>arXiv</i>, 2023.</p>
+    </li>
+    
+</ol> -->
+
+
+<!-- <p>&nbsp;&nbsp;* Corresponding author,&nbsp;&nbsp;&nbsp;# Co-first author </p>  -->
+<!-- <p>I am glad to collaborate with all my colleagues on studies I am interested in 😊.
+</p> -->
+<h2>Teaching <small></small></h2>
+<ul>
+  <li>Applied Stochastic Processes: Fall 2022.</li>
+  <li>Multivariate Statistical Analysis: Spring 2023, Fall 2023, Spring 2024, Fall 2024, Spring 2025.</li>
+  <li>
+<!--         Causal Inference: Spring 2023, Fall 2023, Fall 2024. (my recent  <a href="CausalFall/Survey.pdf" target="_blank">survey</a>) -->
+        Causal Inference: Spring 2023, Fall 2023, Fall 2024, Spring 2025. 
+<!--     <ul> -->
+<!--       <li><a href="CausalFall/chapter1.pdf" target="_blank">Chapter 1：从辛普森悖论谈起</a></li> -->
+<!--       <li><a href="CausalFall/chapter2.pdf" target="_blank">Chapter 2：随机化试验--因果推断的金标准</a></li> -->
+<!--       <li><a href="CausalFall/chapter3_full.pdf" target="_blank">Chapter 3：不可避免的观察性研究</a></li>     -->
+<!--       <li><a href="CausalFall/chapter4_IV_NC.pdf" target="_blank">Chapter 4：充满挑战的未知混杂</a></li> -->
+<!--       <li><a href="CausalFall/chapter5_paneldata.pdf" target="_blank">Chapter 5：面板数据</a></li> -->
+<!--       <li><a href="CausalFall/post_treatment.pdf" target="_blank">Chapter 5：关于后处理变量的讨论</a></li> -->
+<!--       <li><a href="CausalFall/home3.pdf" target="_blank">期末作业</a></li> -->
+<!--     </ul> -->
+  </li> 
+</ul>
+
+ 
+<!-- <h2>Recent News</h2>
+
+<!-- 三张照片 -->
+<!-- <!-- <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin: 20px 0;">
+  <img src="photos/Graduation photo1.jpg" alt="Graduation 1" style="max-width: 240px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">  
+  <img src="photos/Graduation photo3.jpg" alt="Graduation 1" style="max-width: 240px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+  <img src="photos/Graduation photo2.jpg" alt="Graduation 1" style="max-width: 240px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+</div>
+
+
+<ul style="list-style: none; padding-left: 1em;">
+  <li>🎓 Congratulations to all graduates! Wishing you all the best in your future endeavors.</li>
+  <li>📢 Interested in causal inference? You're warmly welcome to join our research group.</li>
+  <li>📧 Feel free to <a href="mailto:shanshanluo@btbu.edu.cn">contact me anytime</a>.</li>
+</ul> --> 
+
+
+<!-- <!-- 	 -->
+<!-- <style>
+  .highlight-box {
+    border: 3px dashed #c4a7e7;
+    border-radius: 20px;
+    padding: 30px;
+    background-color: #fdf9ff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    margin: 40px auto;
+    max-width: 900px;
+    text-align: center;
+  }
+
+  .highlight-box img {
+    max-width: 240px;
+    border-radius: 12px;
+    margin: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  }
+
+  .highlight-box li {
+    list-style: none;
+    font-size: 18px;
+    margin: 12px 0;
+  }
+
+  .highlight-box li::before {
+    content: "🌸";
+    margin-right: 8px;
+  }
+
+  .highlight-box a {
+    color: #3466c2;
+    text-decoration: none;
+  }
+
+  .highlight-box a:hover {
+    text-decoration: underline;
+  }
+</style>
+
+<div class="highlight-box">
+  <div>
+    <img src="photos/Graduation photo1.jpg" alt="Graduation 1">
+    <img src="photos/Graduation photo3.jpg" alt="Graduation 3">
+    <img src="photos/Graduation photo2.jpg" alt="Graduation 2">
   </div>
-</body>
-</html>
+  <ul>
+    <li>  Congratulations to all graduates! Wishing you all the best in your future endeavors. 🎓 </li>
+<!--     <li> 📢 Interested in causal inference? You're warmly welcome to join our research group.  </li>
+    <li> 📧 Feel free to <a href="mailto:shanshanluo@btbu.edu.cn">contact me anytime</a>.  </li> -->
+<!--   </ul>  -->  
+ 
+<!--  --> 
+
+<div id="footer">
+    <div id="footer-text"></div>
+</div>
+
+</div>
+
+</body></html>
