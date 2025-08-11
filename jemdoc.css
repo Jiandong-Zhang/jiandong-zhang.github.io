@@ -1,5 +1,11 @@
 /* Default css file for jemdoc. */
 
+p {
+  text-align: justify;
+  text-justify: inter-word; /* 让单词之间的空格更均匀 */
+}
+
+
 table#tlayout {
     border: none;
     border-collapse: separate;
