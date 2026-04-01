@@ -1,67 +1,134 @@
- <meta name="description" content="Jiandong Zhang&#39;s home page">
-<link rel="stylesheet" href="jemdoc.css" type="text/css">
-<link rel="shortcut icon" href="photo/yy.png">
-<title>Jiandong Zhang's Homepage</title> >
 
-  <head>
-  <title>My Webpage</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="jiandong Zhang's home page">
+  <link rel="stylesheet" href="jemdoc.css" type="text/css">
+  <link rel="shortcut icon" href="BTBU_logo.png">
+  <title>jiandong Zhang's Homepage</title>
+
   <style>
-    .pdf-container {
-    position: relative;
-    height: 0;
-    overflow: hidden;
-    padding-bottom: 56.25%; /* 比例为16:9的填充百分比 */
+    /* ===== Top fixed nav (jiandong Zhang left, menu right) ===== */
+    .topnav{
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      height:56px;
+      background:#003366;
+      z-index:9999;
     }
-    .pdf-container object {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: none;
+    .nav-inner{
+      max-width:960px;
+      margin:0 auto;
+      height:56px;
+      padding:0 14px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      box-sizing:border-box;
+    }
+    .nav-left{display:flex; align-items:center;}
+    .nav-right{
+      display:flex;
+      align-items:center;
+      justify-content:flex-end;
+      gap:14px;
+      flex-wrap:wrap;
+      text-align:right;
+    }
+    .topnav .nav-name{
+      color:#fff !important;
+      font-weight:800;
+      font-size:22px;
+      letter-spacing:.2px;
+      text-decoration:none;
+    }
+    .topnav a{
+      color:#fff !important;
+      text-decoration:none;
+      font-size:14px;
+      line-height:1;
+    }
+    .topnav a:hover{ text-decoration:underline; }
+
+    /* Prevent content being hidden under fixed nav */
+    #layout-content{ padding-top:70px; }
+
+    /* Anchor offset so headings aren't hidden */
+    h2[id]{ scroll-margin-top:70px; }
+
+    /* Mobile */
+    @media (max-width: 600px){
+      .topnav{height:auto;}
+      .nav-inner{
+        height:auto;
+        padding:10px 12px;
+        align-items:flex-start;
+        gap:8px;
+      }
+      .nav-right{gap:10px;}
+      .topnav .nav-name{font-size:20px;}
+      #layout-content{padding-top:95px;}
     }
   </style>
-  </head>
+</head>
 
-<body> 
-<div id="layout-content" style="margin-top:25px">
+<body>
 
-	 <!-- <a href="/cn">中文版本</a>-->
-		
-<table>
-  <tbody>
-    <tr>
-      <td width="670">
-        <div id="toptitle">
-          <h1> &nbsp;   <span style="font-family: KaiTi,  '楷体',  STKaiti">张建东 </span>   </h1>
-        </div>
-        <p>
-          <!--   <FONT size=5 face="Times New Roman">Associate Professor</FONT><br>
-         <br>
-          <a href="https://sxxy.nwnu.edu.cn/2024/0116/c1327a224362/page.htm" target="_blank">
-   Department of  Statistics 
-</a> & 
-<<a href="https" target="_blank"> 
-  !组-->
-</a><br>
-副教授,  硕士研究生导师 <br>
-数学与统计学院,  西北师范大学 <br>
-Office:甘肃省兰州市安宁区安宁东路967号西北师范大学致勤楼A区1601-1室  <br>
-Email: jdzhang(AT)nwnu.edu.cn
-        </p>
-      </td>
-      <td>
-<!--      <img src="photos/zjd.jpg" border="0" width="200">  -->
-        <img src="photo/yy.png" border="0" width="180"> 
-      </td>
-    </tr>
-  </tbody>
-</table>
-	
-<h2>个人简介</h2>
-<ul>
-张建东,  西北师范大学数学与统计学院副教授,  硕士生导师,  美国数学会《Mathematical Reviews》评论员。<br>
-师从颜荣芳教授，于2022年获得概率论与数理统计专业理学博士学位,  主要从事数据科学与人工智能的统计理论与方法研究,<br> 
+  <!-- Fixed top navigation -->
+  <div class="topnav" id="home">
+    <div class="nav-inner">
+      <div class="nav-left">
+        <a class="nav-name" href="#home">Feng Xie</a>
+      </div>
+      <div class="nav-right">
+        <a href="#bio">Biography</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#students">Students</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#service">Academic Service</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="layout-content">
+
+    <!--<a href="/cn">中文版本</a>-->
+
+    <table>
+      <tbody>
+        <tr>
+          <td width="670">
+            <div id="toptitle">
+              <h1>jiandong Zhang &nbsp; <img src="photos/zjd.jpg" height="38px" style="margin-bottom:-10px" alt=''></h1>
+            </div>
+            <p>
+              <FONT size=5 face="Times New Roman">Associate Professor</FONT><br>
+              <br>
+              <a href="https://stxy.btbu.edu.cn/szdw/yytjxsz/fjsyytjx/c91fb67076584b08b0d0cfa4a7b65b8f.htm" target="_blank"> Department of Applied Statistics</a>
+              &amp; <a href="https://btbu-causality.group/" target="_blank">Causal Inference Group</a><br>
+              Beijing Technology and Business University <br>
+              Beijing, China. 102488.<br>
+              <br>
+              &#127970 Office: 甘肃省兰州市安宁区安宁东路967号西北师范大学致勤楼A区1601-1室 <br>
+              <br>
+              &#128231 Email : jdzhang(AT)nwnu.edu.cn
+            </p>
+          </td>
+          <td>
+            <img src="photo/yy.png" border="0" width="300" height="350" alt="">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="bio">Biography</h2>
+    <ul>
+      张建东, 西北师范大学数学与统计学院副教授, 硕士生导师, 美国数学会《Mathematical Reviews》评论员。<br>
+师从颜荣芳教授，于2022年获得概率论与数理统计专业理学博士学位, 主要从事数据科学与人工智能的统计理论与方法研究,<br>
 <p>已在以下SCI期刊发表学术论文：</p>
 <p>- Statistical Theory and Related Field (中国数学T3)</p>
 <p>- Communications in Statistics-Theory and Methods (中国数学会T3)</p>
@@ -73,172 +140,175 @@ Email: jdzhang(AT)nwnu.edu.cn
 <p>- Naval Research Logistics (中国优选法统筹法与经济数学研究会T2)</p>
 <p>- Journal of Risk and Reliability (中国优选法统筹法与经济数学研究会T2)</p>
 <p>- Probability in the Engineering and Informational Science</p>
-	
 <p>科研项目：</p>
 <p>- 主持省科技厅青年科技基金1项</p>
 <p>- 主持省教育厅高校教师创新基金1项</p>
 <p>- 参与国家自然科学面上和地区基金4项</p>
+	</ul>
+
+    <h2 id="research">Research Interests:</h2>
+     <ul class="gbt-list">
+      <li><b>Causal Structure Learning:</b> Global and local structure learning under latent confounding; causal discovery from multi-source and interventional data.</li>
+      <li><b>Causal Effect Estimation:</b> Testability of valid adjustment sets, instrumental variables, and proxy variables from observational data.</li>
+      <li><b>Causal Attribution:</b> Causal structure-based root cause analysis.</li>
+    </ul>
+
+
+
+    <p style="font-size: 20px; text-align: justify; color: #ff0000; font-weight: bold;">
+      计划招收2026级硕士研究生若干名，欢迎对本研究方向感兴趣的同学发送简历至我的邮箱进一步沟通!
+    </p>
+
+    <h2 id="publications">Publications (* Equal Contribution,  &#128231 Corresponding author) &nbsp;&nbsp;&nbsp;
+      <a href="https://scholar.google.com/citations?user=stLFCtQAAAAJ" target="_blank"> [Google Scholar Link]</a> <small></small>
+    </h2>
+
+
+
+  <br><font size="4"><b>Published Papers</b></font>
+  <br>
+  <br><font size="4" color="#003366"><b>2026</b></font>
+  <ul class="gbt-list">
+  <li> <p>Lv Guoqiang, Yan Rongfang, and Zhang Jiandong (2026). Usual stochastic orderings of the second smallest order statistics with dependent demi-parametric distribution random variables.
+	  Communications in Statistics-Theory and Methods, 55 (9):2853–2876,T3.</li></p>
+  </ul>
+	  
+  <br><font size="4" color="#003366"><b>2025</b></font>
+  <ul class="gbt-list">
+  <li><p>
+    Niu Jiale, Yan Rongfang, and Zhang Jiandong (2025). Preventive replacement policies of parallel/series systems with dependent components under deviation costs.
+	Reliability Engineering & System Safety, 260, 111033,T2.
+  </li></p>
+ </ul>
+  
+  <br><font size="4" color="#003366"><b>2024</b></font>
+  <ul class="gbt-list">
+  <li><p>
+    Guo Man-Yuan, Zhang Jiandong, Zhang Yiying, and Zhao Peng (2024). Optimal redundancy allocations for series systems under hierarchical dependence structures. 
+	Quality and Reliability Engineering International, 40(4):1540-1565..
+  </li></p>
+
+  <li><p>
+   Zhang Jiandong, Guo Zhouxia, Niu Jiale, and Yan Rongfang (2024). Increasing convex order of capital allocation with dependent assets under threshold model.
+   Statistical Theory and Related Fields, 8 (2):124-135, T3 .
+  </li></p>
+
+  <li><p>
+   Guo Man-Yuan, Zhang Jiandong, and Yan Rongfang (2024). Stochastic comparisons of second largest order statistics with dependent heterogeneous random variables.
+   Communications in Statistics-Theory and Methods, 54 (12):3443-3461, T3 .
+  </li></p> 
+  </ul>
+
+  <br><font size="4" color="#003366"><b>2023</b></font>
+  <ul class="gbt-list">
+  <li><p>
+    Zhang Jiandong, and Zhang Yiying (2023).
+	Stochastic comparisons of relevation allocation policies in coherent systems. Test, 32 (3):865-907, T2.
+  </li></p>
+	  
+  <li><p>
+    Zhang Jiandong, Yan Rongfang, and Zhang Yiying (2023). Reliability analysis of fail-safe systems with heterogeneous and dependent components subject to random shocks.
+	Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability, 237 (6):1073-1087, T2 .
+  </li></p>
+
+  <li><p>
+    Zhang Jiandong, Yan Rongfang, and Zhang Yiying (2023). Stochastic comparisons of largest claim amount from heterogeneous and dependent insurance portfolios. 
+	Journal of Computational and Applied Mathematics, 431:115265, T3 .
+  </li></p>
+  <li><p>
+    Lu B., Zhang Jiandong, and Yan Rongfang (2023). Optimal allocation of a coherent system with statistical dependent subsystems. 
+	Probability in the Engineering and Informational Sciences, 37(1):29-48.
+  </li></p>
+  </ul>
+	  
+  <br><font size="4" color="#003366"><b>Before 2023</b></font>
+  <ul class="gbt-list">
+  <li><p>
+   Zhang Jiandong, and Zhang Yiying (2022). A copula based approach on optimal allocation of hot standbys in series systems. 
+   Naval Research Logistics (NRL), 69 (6):902-913, T2. 
+  </li></p>
+  <li><p>
+Zhang Jiandong, Yan Rongfang, and Wang Junrui (2022). Reliability optimization of parallel-series and series-parallel systems with statistically dependent components.
+Applied Mathematical Modelling, 102:618-639, T2.
+  </li></p> 
+  <li><p>
+   Guo Zhouxia, Zhang Jiandong, and Yan Rongfang (2022). On inactivity times of failed components of coherent system under double monitoring.
+   Probability in the Engineering and Informational Sciences, 36(3):923-940.
+  </li></p>
+  <li><p>
+   Yan Rongfang, Zhang Jiandong, and Zhang Yiying (2021). Optimal allocation of relevations in coherent systems. 
+   Journal of Applied Probability, 58 (4):1152-1169, T3.
+  </li></p>
 </ul>
-	
-<h2>Research Interests</h2>
-<ul>
-<li> <p> Causal Structure Learning: Global and local structure learning under latent confounding; causal discovery from multi-source and interventional data.</p>
-<li> <p> Causal Effect Estimation: Testability of valid adjustment sets, instrumental variables, and proxy variables from observational data.</p>
-<li> <p> Causal Attribution: Causal structure-based root cause analysis.</p>
-<p> 计划招收2026级硕士研究生若干名，欢迎对本研究方向感兴趣的同学发送简历至我的邮箱进一步沟通!</p>
-</ul>
-	
-
-<!-- <pre><font size="3"><b>* Corresponding author</b></font></pre>-->
-
-<!--<font size="3"><b>Working papers</b></font> 
-<ul>
-  <li>
-    dd
-  </li>
-</ul>-->
-<!-- <font size="3"><b>Accepted papers</b></font>  -->
-	
-<h2>代表性论文 <small></small></h2>	
-<ul>
-<li> <p> Zhang Jiandong, and Zhang Yiying (2023). Stochastic comparisons of relevation allocation policies in coherent systems. <em>Test</em>, 32(3):865-907, (中国数学会推荐期刊目录T2类).</p> </li>
-<li> <p> Zhang Jiandong, and Zhang Yiying (2022). A copula based approach on optimal allocation of hot standbys in series systems. <em>Naval Research Logistics (NRL)</em>, 69(6): 902-913, (中国优选法统筹法与经济数学研究会推荐期刊目录T2类).</p> </li>
-<li> <p> Yan Rongfang, Zhang Jiandong, and Zhang Yiying (2021). Optimal allocation of relevations in coherent systems. <em>Journal of Applied Probability</em>, 58(4): 1152-1169, (中国数学会推荐期刊目录T3类).</p> </li>
-<li> <p> Zhang Jiandong, Yan Rongfang, and Wang Junrui (2022). Reliability optimization of parallel-series and series-parallel systems with statistically dependent components. <em>Applied Mathematical Modelling</em>, 102:618-639, (中国数学会推荐期刊目录 T2 类).</p> </li>
-<li> <p> Zhang Jiandong, Yan Rongfang, and Zhang Yiying (2023). Reliability analysis of fail-safe systems with heterogeneous and dependent components subject to random shocks. <em>Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability</em> 237(6):1073-1087, (中国优选法统筹法与经济数学研究会推荐期刊目录 T2 类).</p> </li>
-<li> <p> Zhang Jiandong, Yan Rongfang, and Zhang Yiying (2023). Stochastic comparisons of largest claim amount from heterogeneous and dependent insurance portfolios. <em>Journal of Computational and Applied Mathematics</em>, 431:115265, (中国数学会推荐期刊目录 T3 类).</p> </li>
-<li> <p> Lv Guoqiang, Yan Rongfang, and Zhang Jiandong (2026). Usual stochastic orderings of the second smallest order statistics with dependent demi-parametric distribution random variables. <em>Communications in Statistics-Theory and Methods</em>, 55(9):2853–76, (中国数学会推荐期刊目录T3类).</p> </li>
-<li> <p> Niu Jiale, Yan Rongfang, and Zhang Jiandong (2025). Preventive replacement policies of parallel/series systems with dependent components under deviation costs. <em>Reliability Engineering & System Safety</em>, 260, 111033, (中国优选法统筹法与经济数学研究会推荐期刊目录 T2 类).</p> </li>
-<li> <p> Guo Man-Yuan,Zhang Jiandong, Zhang Yiying, and Zhao Peng (2024). Optimal redundancy allocations for series systems under hierarchical dependence structures. <em>Quality and Reliability Engineering International</em>, 40(4):1540-1565.</p> </li>
-<li> <p> Zhang Jiandong, Guo Zhouxia, Niu Jiale, and Yan Rongfang (2024). Increasing convex order of capital allocation with dependent assets under threshold model. <em>Statistical Theory and Related Fields</em>, 8(2):124-135, (中国数学会推荐期刊目录 T3 类).</p> </li>
-<li> <p> Guo Man-Yuan, Zhang Jiandong, and Yan Rongfang (2024). Stochastic comparisons of second largest order statistics with dependent heterogeneous random variables. <em>Communications in Statistics-Theory and Methods</em>, 54(12):3443-3461, (中国数学会推荐期刊目录T3类).</p> </li>
-<li> <p> Guo Zhouxia,Zhang Jiandong, and Yan Rongfang (2022). On inactivity times of failed components of coherent system under double monitoring. <em>Probability in the Engineering and Informational Sciences</em>, 36(3), 923-940.</p> </li>
-<li> <p> Zhang,  J.,  & Zhang,  Y. (2022). A copula-based approach on optimal allocation of hot standbys in series systems. <i>Naval Research Logistics</i>,  69(6),  902-913,  T2.</li> 
-<li> <p> Zhang, J., Guo, Z., Niu, J., & Yan, R. (2024). Increasing convex order of capital allocation with dependent assets under threshold model. <i>Statistical Theory and Related Fields</i>, 8(2), 124-135,  T3.	</p></li>   		
-<li> <p> Zhang,  J.,  Yan,  R.,  & Zhang,  Y. (2023). Reliability analysis of fail-safe systems with heterogeneous and dependent components subject to random shocks. <i>Proceedings of the Institution of Mechanical Engineers,  Part O: Journal of Risk and Reliability</i>,  237(6),  1073-1087,  T2.	</p></li>  		
-<li> <p> Zhang,  J.,  Yan,  R.,  & Zhang,  Y. (2023). Stochastic comparisons of largest claim amount from heterogeneous and dependent insurance portfolios. <i>Journal of Computational and Applied Mathematics</i>,  431,  115265,  T3. 	</p></li>  		
-<li> <p> Zhang,  J.,  & Zhang,  Y. (2023). Stochastic comparisons of relevation allocation policies in coherent systems. <i>TEST</i>,  32(3),  865-907,  T2.</li>  		
-<li> <p> Zhang,  J.,  Yan,  R.,  & Wang,  J. (2022). Reliability optimization of parallel-series and series-parallel systems with statistically dependent components. <i>Applied Mathematical Modelling</i>,  102,  618-639,  T2.	</p></li>  		 		
-<li> <p> Niu,  J.,  Yan,  R.,  & Zhang,  J. (2025). Preventive replacement policies of parallel/series systems with dependent components under deviation costs.  <i>Reliability Engineering & System Safety</i>,  260,  111033,  T2.	</p></li>  		
-<li> <p> Guo, M. Y., Zhang, J., & Yan, R. (2024). Stochastic comparisons of second largest order statistics with dependent heterogeneous random variables. <i>Communications in Statistics-Theory and Methods</i>, 54(12), 3443-3461,  T3.	</p></li>  		
-<li> <p> Yan,  R.,  Zhang,  J.,  & Zhang,  Y. (2021). Optimal allocation of relevations in coherent systems. <i>Journal of Applied Probability</i>,  58(4),  1152-1169,  T3.</li>  		
-<li> <p> Guo,  M. Y.,  Zhang,  J.,  Zhang,  Y.,  & Zhao,  P. (2024). Optimal redundancy allocations for series systems under hierarchical dependence structures. <i>Quality and Reliability Engineering International</i>,  40(4),  1540-1565.	</p></li>  		
-<li> <p> Lu,  B.,  Zhang,  J.,  & Yan,  R. (2023). Optimal allocation of a coherent system with statistical dependent subsystems. <i>Probability in the Engineering and Informational Sciences</i>,  37(1),  29-48.	</p></li>  		
-<li> <p> Guo,  Z.,  Zhang,  J.,  & Yan,  R. (2022). On inactivity times of failed components of coherent system under double monitoring. <i>Probability in the Engineering and Informational Sciences</i>,  36(3),  923-940. </p></li>  
-</ul>
-
-<h2>团队荣誉 <small></small></h2>
-<ul>
-  <li>赵欢欢，温雪怡，赵晓乐，2025年中国研究生数学建模竞赛,全国三等奖，中国学位与研究生教育协会, 中国科协青少年科技中心.</li>
-  <li>张园园，韩梦瑶，白晶，2025年中国研究生数学建模竞赛,全国三等奖，中国学位与研究生教育协会, 中国科协青少年科技中心.</li>
-  <li>赵欢欢，燕一平，赵晓乐，2025年全国应用统计专业研究生案例大赛，全国三等奖，中国统计教育学会高等教育分会.</li>
-  <li>陈明阳、谭婷婷、潘艺、宋晓婷、王玥，2025年“正大杯”全国大学生市场调查与分析大赛,全国三等奖，中国商业统计学会.</li>
-  <li>王文琦、苏羿芯、毕建龙,  2023年全国大学生统计建模大赛,  国家本科生组一等奖,  中国统计教育学会.</li>
-  <li>刘煜熔、张莉、雒焕,  2023年中国研究生数学建模竞赛,  国家二等奖,  中国学位与研究生教育协会,  中国科协青少年科技中心.</li>
-  <li>苏羿芯、王文琦、毕建龙,  2023年美国大学生数学建模竞赛,  Successful Participant奖,  美国工业与应用数学学会.  </li> 
-  <li><p>唐双玲、刘乐、张馨化、闫积慧、李志丹, 2024年国家级大学生创新创业训练计划(202410736005),  教育部高等教育司. </p> </li> 
-  <li>王弘扬、王文琦、苏弈芯、宋海涛,  2023年国家级大学生创新创业训练计划(202310736007),  教育部高等教育司.  </li> 
-  <li>王一丁、李曦、胡喆，2020年全国大学生数学建模竞赛，甘肃赛区本科组特等奖全国二等奖，甘肃省教育厅中国工业与应用数学学会.</li>
-</ul>
-
-	
-<h2>科研项目 </h2>
-	<ul>
- <li> 国家自然科学基金数学天元基金项目(12526628)，202601-202712,  主持.</li> 
- <li> 省高校青年博士“入企入园”项目(2026QB-016)，202601-202601，  主持.</li>
- <li> 市青年科技人才创新项目(2025-QN-101),  202506-202708,  主持.</li>
- <li> 省科技厅青年科技基金项目(24JRRA144),  202408-202607,  主持.</li>   		
- <li> 省教育厅高校教师创新项目(2023A-002),  202405-202604,  主持.</li>
- <li> 国家自然科学基金面上项目(12571506)， 202601-202912， 参与.</li>
- <li> 国家自然科学基金地区项目(12361060),  202401-202712,  参与.</li>   		
- <li> 国家自然科学基金地区项目(12061065),  202101-202412,  参与.</li>   		
- <li> 国家自然科学基金地区项目(11861058),  201901-202212,  参与.</li>   		
- <li> 国家自然科学基金面上项目(71471148),  201501-201812,  参与.</li>   		
- <li> 省科技厅自然科学基金项目(21JR7RA135),  202109-202308,  参与.</li>   		
- <li> 省教育厅产业支撑计划项目(2025CYZC-016),  202501-202612,  参与. </li>  
-</ul> 
-
-<h2>教学工作</h2>
-<p>主要承担的课程有《概率论与数理统计》、《回归分析》、《数据科学导论》、《多元统计分析》、《随机过程》、《高等数学》和《线性代数》等。
-指导学生参加国家级大学生创新创业训练计划2项,  团队成员获全国大学生统计建模大赛国家一等奖、数学建模竞赛国家二等奖及赛区奖等多项。
-</p>
-	
-	
-<h2>荣誉与奖励 <small></small></h2>
-	<ul>  
- <li> <p> 甘肃省自然科学三等奖,  甘肃省人民政府,  2025.</p>	</li> 
- <li> <p> 全国大学生统计建模大赛优秀指导教师奖,  中国统计教育学会,  2023.</p></li> 	
- <li> <p> 中国优选法统筹法与经济数学研究会工业工程分会学术交流暨学会年会最佳论文奖,  中国优选法统筹法与经济数学研究会工业工程分会,  2022.</p>	</li> 
- <li> <p> 清华大学质量与可靠性研究院年会最佳理论论文入围奖,  清华大学工业工程系,  2021.</p></li> 	
- <li> <p> 中国现场统计研究会全国统计学博士研究生学术论坛论文二等奖,  2021.</p>	</li> 
- <li> <p> 华为杯第十八届中国研究生数学建模竞赛三等奖,  2021.</p>	</li> 
- <li> <p> 西北师范大学研究生“学术之星”,  2021.</p>	</li> 
- <li> <p> 西北师范大学数学与统计学院优秀班主任,  2024.</p></li> 	
-</ul> 
-	
-	
-<!-- <h2>Research Interests</h2>
-<p>
-<ul>
-<li><p> 1 </p>
-</li>
- <li><p> 2 </p>
-</li>
- <li><p> 3 </p>
-</li>
-<li><p>4 </p>
-</li>
-</ul>
-</p>
- -->
-<!--<h2>Research Interests</h2>
-<p>1:</p>
-<ul>
-  <li>2</li>
-  <li>3 </li> 
-  <li>4 
-  <li>5</li>
-<li6></li>   
-</ul> -->
-	
- <!--  <p align="justify"><span style="color:#ff0000"><b>meme </b></span></p> -->
 
 
+    <h2 id="students">Students</h2>
+    <font size="4"><b>Phd</b></font>
+    <ul class="stu-list stu-list--one">
+      <li>Xichen Guo (2025-; Co-supervision with Zhi Geng)</li>
+    </ul>
 
-<h2>Academic Service<small></small></h2>
-<ul>
-<li>中国现场统计研究会贝叶斯统计分会理事</li>
-  <li>中国现场统计研究会可靠性工程分会理事</li>
-  <li>美国数学会《Mathematical Reviews》评论员</li>
- <li>SCI期刊匿名审稿人</li>
-	<ul>	
-    <li> <i>Applied Mathematical Modelling  </i></li> 
-	<li> <i>Statistics & Probability Letters </i></li> 
-	<li> <i>Statistical Papers </i></li> 
-	<li> <i>Statistics: A Journal of Theoretical and Applied Statistics </i></li> 
-	<li> <i>Communications in Statistics-Theory and Methods </i></li> 
-	<li> <i>Applied Stochastic Models in Business and Industry </i></li> 
-	<li> <i>Stochastic Models  </i></li> 
-	<li> <i>Probability in the Engineering and Informational Sciences</i></li> 
-	<li> <i>Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability </i></li> 
-</ul>	
-</ul>	
+    <font size="4"><b>Master</b></font>
+    <!-- 
+    2025年
+    -->
+    <ul class="stu-list stu-list--two">
+      <li>Lulu Xiang (2025-)</li>
+      <li>Xingyu Liu (2025-)</li>
+      <li>Zhiqiang Lai (2025-; Co-supervision with Yan Zeng)</li>
+      <li>Keli Zhou (2025-; Co-supervision with Yan Zeng)</li>
+      <li>Weicong Cheng (2025-)</li>
+    </ul>
+    <!-- 
+    2024年
+    -->
+       <ul class="stu-list stu-list--two">
+      <li>Zeyu Liu (2024-)</li>
+      <li>Fengtian Zhang (2024-)</li>
+      <li>Shenglan Nie (2024-; Co-supervision with Yan Zeng)</li>
+      <li>Fuyan Huang (2024-)</li>
+      <li>Ze Wang (2024-)</li>
+    </ul>
 
-<h2>招生信息 </h2>
-<ul>  
-<li> 招生专业：统计学、应用统计,  研究方向：统计机器学习、数据科学与人工智能。</li> 
-<li> 招生要求：踏实勤奋、善于沟通、热爱科学研究。特别提醒：混学位态度的请不要联系我。</li> 
-<li> 欢迎优秀本科生提前加入课题组。</li> 
-<li> 有意者请准备以下材料发送至本人邮箱,  1)个人简历(必选),  2)本科成绩单(可选),  3)四、六级成绩单(可选),
-4)其他能够佐证自身能力的材料(可选)。</li> 
-</ul> 
+    <font size="4"><b>Undergraduate</b></font>
+   <ul class="stu-list stu-list--two">
+      <li>Yuting Zhang (2024-)</li>
+    </ul>
+    <font size="4"><b>Alumni</b></font>
+    <!-- 
+    2023年硕士
+    -->
+    <ul class="stu-list stu-list--one">
+      <li>Xichen Guo (2023-2025; -&gt; Phd at Beijing Technology and Business University)</li>
+      <li>Zhen Yao (2023-2025; -&gt; Phd at Dalian University of Technology)</li>
+      <li>Zheng Li (2023-2025; -&gt; Research Assistant at SIAT, Chinese Academy of Sciences)</li>
+    </ul>
+        <!-- 
+    2023年本科
+    -->
+        <ul class="stu-list stu-list--one">
+      <li>Lin Xie (2023-2025; -&gt; Master at Sun Yat-sen University)</li>
+    </ul>
 
-	
-	
-<div id="footer">
-  <div id="footer-text"></div>
-</div>
+    <h2 id="teaching">Teaching</h2>
+     <ul class="gbt-list">
+      <li>Data Analysis Based on Python (Spring 2025)</li>
+      <li>Statistical Computing (Fall 2025, Spring 2025, Spring 2024)</li>
+      <li>Machine Learning (Fall 2025, Fall 2024, Fall 2023)</li>
+      <li>Applied Stochastic Processes (Fall 2022)</li>
+    </ul>
 
-</div>
+    <h2 id="service">Academic Service <small></small></h2>
+      <ul class="gbt-list">
+    <li>Area Chair: NeurIPS 2024, 2025; ICML 2025, 2026.</li>
+    <li>Conference PC or Reviewer: NeurIPS 2021,2022, 2023; ICML 2022, 2024; ICLR 2023, 2024; AAAI 2025; KDD 2025; AISTATS 2022, 2023, 2024, 2026; UAI 2022, 2024; CLeaR 2022, 2023, 2024.</li>
+    <li>Journal Reviewer: Journal of the American Statistical Association (JASA); Journal of Machine Learning Research (JMLR); IEEE Transactions on NNLS (TNNLS); Transactions on KDD (TKDD); Transactions on MLR (TMLR); IEEE Journal on Selected Areas in Information Theory; Information Science, Science China: Information Sciences and so on.</li>
+    </ul>
+    <div id="footer">
+      <div id="footer-text"></div>
+    </div>
 
-</body></html>
+  </div>
+
+</body>
+</html>
