@@ -7,25 +7,18 @@
   <link rel="stylesheet" href="jemdoc.css" type="text/css">
   <link rel="shortcut icon" href="photo/nwnu.png"> 
   <title>jiandong Zhang's Homepage</title>
-	<script>
-document.oncontextmenu = function(){return false;};
-document.onkeydown = function(e) {
+<script>
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+document.addEventListener('keydown', function(e) {
   if (e.key === 'F12' || 
-      (e.ctrlKey && e.shiftKey && e.key === 'I') || 
-      (e.ctrlKey && e.key === 'U')) {
-    return false;
+      (e.ctrlKey && e.key === 'u') || 
+      (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+    e.preventDefault();
   }
-};
+});
 </script>
-
-<style>
-body {
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-}
-</style>
 
   <style>
     /* ===== Top fixed nav (jiandong Zhang left, menu right) ===== */
