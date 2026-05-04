@@ -64,12 +64,10 @@ document.addEventListener('keydown', function(e) {
     }
     .topnav a:hover{ text-decoration:underline; }
 
-    /* Prevent content hiding under nav */
     #layout-content{ padding-top:70px; }
-
     h2[id]{ scroll-margin-top:70px; }
 
-    /* Language toggle system */
+    /* Language control */
     .zh, .en { display: none; }
     body.lang-zh .zh { display: block; }
     body.lang-zh .zh-inline { display: inline; }
@@ -78,20 +76,17 @@ document.addEventListener('keydown', function(e) {
     body.lang-zh .en, body.lang-en .zh { display: none; }
     body.lang-zh .en-inline, body.lang-en .zh-inline { display: none; }
 
-    /* Nav items */
+    /* Nav items per language */
     .zh-nav, .en-nav { display: none; }
     body.lang-zh .zh-nav { display: inline; }
     body.lang-en .en-nav { display: inline; }
 
-    /* Mobile */
+    /* Publications section is always visible */
+    #publications { display: block !important; }
+
     @media (max-width: 600px){
       .topnav{height:auto;}
-      .nav-inner{
-        height:auto;
-        padding:10px 12px;
-        align-items:flex-start;
-        gap:8px;
-      }
+      .nav-inner{height:auto;padding:10px 12px;align-items:flex-start;gap:8px;}
       .nav-right{gap:10px;}
       .topnav .nav-name{font-size:20px;}
       #layout-content{padding-top:95px;}
@@ -101,25 +96,26 @@ document.addEventListener('keydown', function(e) {
 
 <body class="lang-zh">
 
-  <!-- Fixed top navigation -->
   <div class="topnav" id="home">
     <div class="nav-inner">
       <div class="nav-left">
         <a class="nav-name" href="#home">Jiandong Zhang</a>
       </div>
       <div class="nav-right">
-        <!-- Chinese nav items -->
-        <span class="zh-nav"><a href="#bio-zh">Biography</a></span>
+        <!-- Chinese nav -->
+        <span class="zh-nav"><a href="#bio">Biography</a></span>
         <span class="zh-nav"><a href="#teaching">Teaching</a></span>
         <span class="zh-nav"><a href="#research">Research</a></span>
         <span class="zh-nav"><a href="#honors">Honors</a></span>
-        <span class="zh-nav"><a href="#publications-zh">Publications</a></span>
+        <span class="zh-nav"><a href="#publications">Publications</a></span>
         <span class="zh-nav"><a href="#students">Students</a></span>
         <span class="zh-nav"><a href="#enrollment">Enrollment</a></span>
-        <!-- English nav items -->
-        <span class="en-nav"><a href="#bio-en">Biography</a></span>
-        <span class="en-nav"><a href="#publications-en">Publications</a></span>
-        <!-- Language toggle button -->
+
+        <!-- English nav -->
+        <span class="en-nav"><a href="#bio">Biography</a></span>
+        <span class="en-nav"><a href="#publications">Publications</a></span>
+
+        <!-- Toggle button -->
         <a href="javascript:void(0)" onclick="document.body.className = (document.body.className === 'lang-zh') ? 'lang-en' : 'lang-zh'">
           <span class="zh-inline">English</span>
           <span class="en-inline">中文版</span>
@@ -141,8 +137,8 @@ document.addEventListener('keydown', function(e) {
       </div>
     </div>
 
-    <!-- Chinese Biography -->
-    <div class="zh" id="bio-zh">
+    <!-- ========== Biography (two languages, shared section ID) ========== -->
+    <div class="zh" id="bio">
       <h2>Biography（个人简介）</h2>
       <p style="text-indent: 1em; line-height: 1.8;margin: 0 0 0 0;">
         &nbsp;&nbsp;&nbsp;&nbsp;张建东，男，汉族，1993年生，西北师范大学数学与统计学院副教授，硕士研究生导师，Mathematical Reviews评论员，师从颜荣芳教授获概率论与数理统计专业理学博士学位，
@@ -159,7 +155,6 @@ document.addEventListener('keydown', function(e) {
       </p>
     </div>
 
-    <!-- English Biography -->
     <div class="en" id="bio-en">
       <h2>Biography</h2>
       <p style="text-indent: 1em; line-height: 1.8; margin: 0;">
@@ -167,7 +162,7 @@ document.addEventListener('keydown', function(e) {
       </p>
     </div>
 
-    <!-- Chinese Teaching -->
+    <!-- ========== Teaching (zh only) ========== -->
     <div class="zh" id="teaching">
       <h2>Teaching（教学工作）</h2>
       <p style="text-indent: 2em; line-height: 1.8;">
@@ -175,7 +170,7 @@ document.addEventListener('keydown', function(e) {
       </p>
     </div>
 
-    <!-- Chinese Research -->
+    <!-- ========== Research (zh only) ========== -->
     <div class="zh" id="research">
       <h2>Research（科研项目）</h2>
       <ul style="line-height: 1.2; padding-left: 20px;">
@@ -191,7 +186,7 @@ document.addEventListener('keydown', function(e) {
       </ul>
     </div>
 
-    <!-- Chinese Honors -->
+    <!-- ========== Honors (zh only) ========== -->
     <div class="zh" id="honors">
       <h2>Honors & Awards（荣誉&奖励）</h2>
       <ul style="line-height: 1.2; padding-left: 20px;">
@@ -206,8 +201,8 @@ document.addEventListener('keydown', function(e) {
       </ul>
     </div>
 
-    <!-- Chinese Publications -->
-    <div class="zh" id="publications-zh">
+    <!-- ========== Publications (COMMON, always visible) ========== -->
+    <div id="publications">
       <h2>Publications（部分论文）</h2>
       <ul style="line-height: 1.2; padding-left: 20px; text-align: justify; text-justify: inter-word;">
         <li><strong>Zhang Jiandong</strong>, Zhang Yiying, and Zhao Peng(2026). Reliability analysis of randomly weighted k-out-of-n systems under dynamic random shocks. <em><strong>Reliability Engineering & System Safety</strong></em>, 275, 112790,T2.</li>
@@ -229,19 +224,7 @@ document.addEventListener('keydown', function(e) {
       </ul>
     </div>
 
-    <!-- English Publications -->
-    <div class="en" id="publications-en">
-      <h2>Selected Publications</h2>
-      <ul style="line-height: 1.4; padding-left: 20px; text-align: justify; text-justify: inter-word;">
-        <li><strong>Zhang Jiandong</strong>, Zhang Yiying, and Zhao Peng (2026). Reliability analysis of randomly weighted k-out-of-n systems under dynamic random shocks. <em><strong>Reliability Engineering & System Safety</strong></em>, 275, 112790, T2.</li>
-        <li>Zhao Huanhuan, Zhao Xiaole, Wen Xueyi, Yan Rongfang, and <strong>Zhang Jiandong</strong> (2026). Slope Stability and Safety Assessment Based on Random Forest Enhanced under Multi-Strategy Pelican Optimization. <em><strong>ICCK Transactions on Systems Safety and Reliability</strong></em>, 2(2), 82-100.</li>
-      </ul>
-      <p style="margin-top: 12px; font-size: 14px; color: #555;">
-        📄 Full publication list available in the <span class="zh-inline">English version</span><span class="en-inline">Chinese version</span> (switch language).
-      </p>
-    </div>
-
-    <!-- Chinese Students -->
+    <!-- ========== Students (zh only) ========== -->
     <div class="zh" id="students">
       <h2>Students（团队获奖）</h2>
       <ul style="line-height: 1.2; padding-left: 20px;">
@@ -258,7 +241,7 @@ document.addEventListener('keydown', function(e) {
       </ul>
     </div>
 
-    <!-- Chinese Enrollment -->
+    <!-- ========== Enrollment (zh only) ========== -->
     <div class="zh" id="enrollment">
       <h2>Enrollment（招生信息）</h2>
       <ul style="line-height: 1.2; padding-left: 20px;">
@@ -274,12 +257,11 @@ document.addEventListener('keydown', function(e) {
 
   </div>
 
-  <!-- Footer -->
   <div style="text-align: right; margin-top: 40px; color: #666; font-size: 14px;">
     © Last revised: May 1, 2026
   </div>
 
-  <!-- 访客地图 -->
+  <!-- 访客地图（共用） -->
   <div style="margin: 20px auto; text-align: center; max-width: 300px;">
     <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=aNhltuTk11MT9iyy0PJ6Mm-xZQPi8sS0v4f6XuauLw4&amp;cl=ffffff&amp;w=a"></script>
   </div>
